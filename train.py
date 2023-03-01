@@ -1,7 +1,11 @@
+import sys
 import tensorflow as tf
 from utils import set_gpu
 
-set_gpu(0)
+assert len(sys.argv) >= 1 and sys.argv[0].isnumeric()
+gpu_index = int(sys.argv[0])
+assert gpu_index >= 0
+set_gpu(gpu_index)
 
 mnist = tf.keras.datasets.mnist
 
@@ -26,3 +30,4 @@ model.compile(optimizer='adam',
 model.fit(x_train, y_train, epochs=50)
 
 model.evaluate(x_test,  y_test, verbose=2)
+
