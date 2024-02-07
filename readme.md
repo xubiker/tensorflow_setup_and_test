@@ -1,7 +1,4 @@
-# Установка tensorflow на серверы лаб. ММОИ
-
-
-## Tensorflow 2.11 with Python 3.10
+## Tensorflow 2.11 with Python 3.10 (серверы ММОИ)
 ```
 conda create --name tf python=3.10
 conda activate tf
