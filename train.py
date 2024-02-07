@@ -2,10 +2,10 @@ import sys
 import tensorflow as tf
 from utils import set_gpu
 
-assert len(sys.argv) >= 1 and sys.argv[0].isnumeric()
-gpu_index = int(sys.argv[0])
-assert gpu_index >= 0
-set_gpu(gpu_index)
+# assert len(sys.argv) >= 1 and sys.argv[0].isnumeric()
+# gpu_index = int(sys.argv[0])
+# assert gpu_index >= 0
+# set_gpu(gpu_index)
 
 mnist = tf.keras.datasets.mnist
 
